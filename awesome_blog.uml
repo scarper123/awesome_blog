@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DjangoModelDependency</ID>
+  <OriginalElement>#awesome_blog</OriginalElement>
+  <nodes>
+    <node x="0.0" y="562.0">django.contrib.sessions.models.Session</node>
+    <node x="132.5" y="486.0">blog.models.Post</node>
+    <node x="0.0" y="162.0">django.contrib.auth.models.Group</node>
+    <node x="380.5" y="81.0">django.contrib.admin.models.LogEntry</node>
+    <node x="66.0" y="405.0">blog.models.Category</node>
+    <node x="123.5" y="324.0">blog.models.Author</node>
+    <node x="56.5" y="81.0">django.contrib.auth.models.Permission</node>
+    <node x="182.5" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+    <node x="79.0" y="243.0">django.contrib.auth.models.User</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="blog.models.Author" target="django.contrib.auth.models.User">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="django.contrib.admin.models.LogEntry" target="django.contrib.contenttypes.models.ContentType">
+      <point x="0.0" y="-15.5" />
+      <point x="531.5" y="56.0" />
+      <point x="463.75" y="56.0" />
+      <point x="93.75" y="15.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+      <point x="-64.75" y="-15.5" />
+      <point x="143.75" y="218.0" />
+      <point x="135.5" y="218.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+      <point x="64.75" y="-15.5" />
+      <point x="273.25" y="218.0" />
+      <point x="281.5" y="218.0" />
+      <point x="281.5" y="137.0" />
+      <point x="284.5" y="137.0" />
+      <point x="76.0" y="15.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
+      <point x="0.0" y="-15.5" />
+      <point x="135.5" y="137.0" />
+      <point x="132.5" y="137.0" />
+      <point x="-76.0" y="15.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
+      <point x="0.0" y="-15.5" />
+      <point x="208.5" y="56.0" />
+      <point x="276.25" y="56.0" />
+      <point x="-93.75" y="15.5" />
+    </edge>
+    <edge source="blog.models.Post" target="blog.models.Author">
+      <point x="38.0" y="-15.5" />
+      <point x="246.5" y="461.0" />
+      <point x="259.5" y="461.0" />
+      <point x="259.5" y="380.0" />
+      <point x="251.0" y="380.0" />
+      <point x="42.5" y="15.5" />
+    </edge>
+    <edge source="blog.models.Category" target="blog.models.Author">
+      <point x="0.0" y="-15.5" />
+      <point x="157.5" y="380.0" />
+      <point x="166.0" y="380.0" />
+      <point x="-42.5" y="15.5" />
+    </edge>
+    <edge source="blog.models.Post" target="blog.models.Category">
+      <point x="-38.0" y="-15.5" />
+      <point x="170.5" y="461.0" />
+      <point x="157.5" y="461.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8580750407830342" x="341.87262357414454" y="179.01901140684413" />
+  <SelectedNodes />
+  <Categories />
+</Diagram>
+

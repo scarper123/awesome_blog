@@ -10,12 +10,6 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 
-class LoginForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ('username', 'password')
-
-
 class RegisterForm(forms.Form):
     username = forms.CharField(label="Username")
     email = forms.CharField(label="Email Address")

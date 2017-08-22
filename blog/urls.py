@@ -18,6 +18,5 @@ from django.contrib import admin
 from blog import views
 
 urlpatterns = [
-    # url(r'^$', views.post_list, name='post_list'),
-    url(r'^$', views.hello_world, name='hello_world'),
+    url(r'^$', views.post, name='post_list'),
 ]

@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
 # Create your models here.
 #
 
 
 class Author(models.Model):
-
     user = models.OneToOneField(User)
     phone = models.IntegerField(default=12345678911)
     activation_key = models.CharField(default=1, max_length=255)
@@ -16,7 +17,7 @@ class Author(models.Model):
         verbose_name_plural = "Authors"
 
     def __str__(self):
-        pass
+        return self.user.username
 
 
 class Category(models.Model):
@@ -28,7 +29,7 @@ class Category(models.Model):
         verbose_name_plural = "Categorys"
 
     def __str__(self):
-        pass
+        return self.name
 
 
 class Post(models.Model):
@@ -44,4 +45,4 @@ class Post(models.Model):
         verbose_name_plural = "Posts"
 
     def __str__(self):
-        pass
+        return self.title

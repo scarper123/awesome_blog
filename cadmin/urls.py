@@ -17,7 +17,8 @@ from django.conf.urls import url
 from cadmin import views
 
 urlpatterns = [
-    url(r'^login/$', views.login, name='login'),
-    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^login/$', views.login, kwargs={'template_name': 'cadmin/login.html'}, name='login'),
+    url(r'^logout/$', views.logout, kwargs={'template_name': 'cadmin/logout.html'}, name='logout'),
     url(r'^register/$', views.register, name='register'),
+    url(r'^profile/$', views.profile, name='profile'),
 ]

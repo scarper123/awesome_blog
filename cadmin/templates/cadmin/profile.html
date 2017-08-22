@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+    Profile -- {{ block.super }}
+{% endblock %}
+{% block main %}
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>{{ request.user.username }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ request.user.email }}</td>
+        </tr>
+        <tr>
+            <td>Staff:</td>
+            <td>{{ request.user.is_staff }}</td>
+        </tr>
+        <tr>
+            <td>Active:</td>
+            <td>{{ request.user.is_active }}</td>
+        </tr>
+        <tr>
+            <td>Join Date:</td>
+            <td>{{ request.user.date_joined }}</td>
+        </tr>
+
+        <tr>
+            <td>Last Login:</td>
+            <td>{{ request.user.last_login }}</td>
+        </tr>
+    </table>
+{% endblock %}
