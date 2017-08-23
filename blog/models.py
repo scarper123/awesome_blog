@@ -8,7 +8,7 @@ from django.db import models
 
 class Author(models.Model):
     user = models.OneToOneField(User)
-    phone = models.IntegerField(default=12345678911, blank=True)
+    phone = models.IntegerField(default=1, blank=True)
     activation_key = models.CharField(default=1, max_length=255)
     email_validated = models.BooleanField(default=False)
 
