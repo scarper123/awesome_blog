@@ -13,6 +13,9 @@
                 <th>Tags</th>
                 <th>Pub Date</th>
                 <th>Author</th>
+                {% if request.user.is_authenticated %}
+                    <th>Action</th>
+                {% endif %}
             </tr>
             {% for post in posts %}
                 {% include 'blog/post_info.html' %}

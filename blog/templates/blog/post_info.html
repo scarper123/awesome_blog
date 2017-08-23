@@ -1,5 +1,18 @@
 <td>{{ post.title }}</td>
 <td>{{ post.category }}</td>
-<td>{{ post.tags }}</td>
+<td>
+    {% for tag in post.tags.all %}
+        {{ tag }}
+        {% if not forloop.last %}
+            |
+        {% endif %}
+    {% empty %}
+        None
+    {% endfor %}
+</td>
 <td>{{ post.pub_date }}</td>
 <td>{{ post.author.user.username }}</td>
+
+{% if request.user.is_authenticated %}
+    <td><a href="">Edit</a>|<a href="">Delete</a></td>
+{% endif %}

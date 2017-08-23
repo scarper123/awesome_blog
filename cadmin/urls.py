@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^logout/$', views.logout, kwargs={'template_name': 'cadmin/logout.html'}, name='logout'),
     url(r'^register/$', views.register, name='register'),
     url(r'^profile/$', views.profile, name='profile'),
+    url(r'^profile/api$', views.profile, kwargs={"json": True}, name='profile'),
 ]

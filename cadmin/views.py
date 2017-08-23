@@ -1,6 +1,7 @@
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.http.response import JsonResponse
 
 from cadmin import forms
 
@@ -32,5 +33,16 @@ def register(request):
 
 
 @login_required
-def profile(request):
+def profile(request, json=False):
+    if json:
+        user = request.user
+        data = {'username': user.username,
+                'email': user.email,
+                'active': user.is_active,
+                'staff': user.is_staff,
+                'superuser': user.is_superuser,
+                'date_join': user.date_joined,
+                'last_login': user.last_login
+                }
+        return JsonResponse(data, safe=False)
     return render(request, 'cadmin/profile.html')

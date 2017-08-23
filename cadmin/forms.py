@@ -9,10 +9,13 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
+from blog import models
+
 
 class RegisterForm(forms.Form):
     username = forms.CharField(label="Username")
-    email = forms.CharField(label="Email Address")
+    email = forms.EmailField(label="Email Address")
+    phone = forms.IntegerField(label="Phone")
     password1 = forms.CharField(label="Enter password", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Confirm password", widget=forms.PasswordInput)
 
@@ -31,6 +34,12 @@ class RegisterForm(forms.Form):
 
         return email
 
+    def clean_phone(self):
+        phone = self.cleaned_data['phone']
+        if phone < 0 or len(str(phone)) < 11:
+            raise ValidationError("Phone not match.")
+        return phone
+
     def clean_password2(self):
         password1 = self.cleaned_data['password1']
         password2 = self.cleaned_data['password2']
@@ -41,7 +50,9 @@ class RegisterForm(forms.Form):
         return password2
 
     def save(self):
-        User.objects.create_user(self.cleaned_data['username'],
-                                 self.cleaned_data['email'],
-                                 self.cleaned_data['password2'],
-                                 is_staff=True)
+        user = User.objects.create_user(self.cleaned_data['username'],
+                                        self.cleaned_data['email'],
+                                        self.cleaned_data['password2'],
+                                        is_staff=True)
+        author = models.Author(user=user, phone=self.cleaned_data['phone'])
+        author.save()
