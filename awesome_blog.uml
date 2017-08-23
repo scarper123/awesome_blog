@@ -3,77 +3,90 @@
   <ID>DjangoModelDependency</ID>
   <OriginalElement>#awesome_blog</OriginalElement>
   <nodes>
-    <node x="0.0" y="562.0">django.contrib.sessions.models.Session</node>
-    <node x="132.5" y="486.0">blog.models.Post</node>
-    <node x="0.0" y="162.0">django.contrib.auth.models.Group</node>
-    <node x="380.5" y="81.0">django.contrib.admin.models.LogEntry</node>
-    <node x="66.0" y="405.0">blog.models.Category</node>
-    <node x="123.5" y="324.0">blog.models.Author</node>
-    <node x="56.5" y="81.0">django.contrib.auth.models.Permission</node>
-    <node x="182.5" y="0.0">django.contrib.contenttypes.models.ContentType</node>
-    <node x="79.0" y="243.0">django.contrib.auth.models.User</node>
+    <node x="205.8257575757576" y="1046.0">blog.models.Post</node>
+    <node x="891.7424242424242" y="0.0">django.contrib.sessions.models.Session</node>
+    <node x="154.74242424242425" y="422.0">django.contrib.auth.models.Group</node>
+    <node x="460.7424242424243" y="167.0">django.contrib.admin.models.LogEntry</node>
+    <node x="0.0" y="879.0">blog.models.Category</node>
+    <node x="198.49242424242425" y="690.0">blog.models.Author</node>
+    <node x="354.0" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+    <node x="198.74242424242425" y="200.0">django.contrib.auth.models.Permission</node>
+    <node x="226.49242424242425" y="589.0">django.contrib.auth.models.User</node>
+    <node x="230.0" y="879.0">blog.models.Tag</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+      <point x="-51.25" y="-25.5" />
+      <point x="277.74242424242425" y="564.0" />
+      <point x="262.24242424242425" y="564.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
     <edge source="blog.models.Author" target="django.contrib.auth.models.User">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
+      <point x="0.0" y="-69.5" />
+      <point x="0.0" y="25.5" />
     </edge>
     <edge source="django.contrib.admin.models.LogEntry" target="django.contrib.contenttypes.models.ContentType">
-      <point x="0.0" y="-15.5" />
-      <point x="531.5" y="56.0" />
-      <point x="463.75" y="56.0" />
-      <point x="93.75" y="15.5" />
-    </edge>
-    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
-      <point x="-64.75" y="-15.5" />
-      <point x="143.75" y="218.0" />
-      <point x="135.5" y="218.0" />
-      <point x="0.0" y="15.5" />
+      <point x="0.0" y="-102.5" />
+      <point x="653.7424242424242" y="142.0" />
+      <point x="576.0" y="142.0" />
+      <point x="74.0" y="58.5" />
     </edge>
     <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
-      <point x="64.75" y="-15.5" />
-      <point x="273.25" y="218.0" />
-      <point x="281.5" y="218.0" />
-      <point x="281.5" y="137.0" />
-      <point x="284.5" y="137.0" />
-      <point x="76.0" y="15.5" />
+      <point x="51.25" y="-25.5" />
+      <point x="60.5" y="69.5" />
+    </edge>
+    <edge source="blog.models.Tag" target="blog.models.Author">
+      <point x="0.0" y="-58.5" />
+      <point x="335.0" y="854.0" />
+      <point x="328.99242424242425" y="854.0" />
+      <point x="0.0" y="69.5" />
     </edge>
     <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
-      <point x="0.0" y="-15.5" />
-      <point x="135.5" y="137.0" />
-      <point x="132.5" y="137.0" />
-      <point x="-76.0" y="15.5" />
+      <point x="0.0" y="-58.5" />
+      <point x="262.24242424242425" y="397.0" />
+      <point x="259.24242424242425" y="397.0" />
+      <point x="-60.5" y="69.5" />
     </edge>
     <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
-      <point x="0.0" y="-15.5" />
-      <point x="208.5" y="56.0" />
-      <point x="276.25" y="56.0" />
-      <point x="-93.75" y="15.5" />
+      <point x="0.0" y="-69.5" />
+      <point x="319.74242424242425" y="142.0" />
+      <point x="428.0" y="142.0" />
+      <point x="-74.0" y="58.5" />
+    </edge>
+    <edge source="blog.models.Post" target="blog.models.Tag">
+      <point x="0.0" y="-80.5" />
+      <point x="330.8257575757576" y="1021.0" />
+      <point x="335.0" y="1021.0" />
+      <point x="0.0" y="58.5" />
     </edge>
     <edge source="blog.models.Post" target="blog.models.Author">
-      <point x="38.0" y="-15.5" />
-      <point x="246.5" y="461.0" />
-      <point x="259.5" y="461.0" />
-      <point x="259.5" y="380.0" />
-      <point x="251.0" y="380.0" />
-      <point x="42.5" y="15.5" />
+      <point x="83.33333333333331" y="-80.5" />
+      <point x="414.1590909090909" y="1021.0" />
+      <point x="450.5" y="1021.0" />
+      <point x="450.5" y="854.0" />
+      <point x="415.99242424242425" y="854.0" />
+      <point x="87.0" y="69.5" />
     </edge>
     <edge source="blog.models.Category" target="blog.models.Author">
-      <point x="0.0" y="-15.5" />
-      <point x="157.5" y="380.0" />
-      <point x="166.0" y="380.0" />
-      <point x="-42.5" y="15.5" />
+      <point x="0.0" y="-58.5" />
+      <point x="105.0" y="854.0" />
+      <point x="241.99242424242425" y="854.0" />
+      <point x="-87.0" y="69.5" />
     </edge>
     <edge source="blog.models.Post" target="blog.models.Category">
-      <point x="-38.0" y="-15.5" />
-      <point x="170.5" y="461.0" />
-      <point x="157.5" y="461.0" />
-      <point x="0.0" y="15.5" />
+      <point x="-83.33333333333331" y="-80.5" />
+      <point x="247.49242424242428" y="1021.0" />
+      <point x="105.0" y="1021.0" />
+      <point x="0.0" y="58.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8580750407830342" x="341.87262357414454" y="179.01901140684413" />
-  <SelectedNodes />
-  <Categories />
+  <settings layout="Hierarchic Group" zoom="1.2580750407830343" x="344.7896784232365" y="942.9198651452282" />
+  <SelectedNodes>
+    <node>blog.models.Post</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
 </Diagram>
 

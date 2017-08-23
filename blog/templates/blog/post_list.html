@@ -4,10 +4,23 @@
 {% endblock %}
 {% block main %}
     <h3 class="navbar-brand">Post</h3>
-    {% for post in posts %}
-        {% include 'blog/post_info.html' %}
-    {% empty %}
+
+    {% if posts %}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Tags</th>
+                <th>Pub Date</th>
+                <th>Author</th>
+            </tr>
+            {% for post in posts %}
+                {% include 'blog/post_info.html' %}
+            {% endfor %}
+        </table>
+    {% else %}
         No Posts
-    {% endfor %}
+    {% endif %}
+
 
 {% endblock %}

@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from blog import models
 
 
@@ -6,12 +7,17 @@ from blog import models
 # https://docs.djangoproject.com/en/1.11/ref/contrib/admin/
 @admin.register(models.Author)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('user', )
+    list_display = ('user',)
 
 
 @admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'author')
+    list_display = ('name', 'slug', 'author')
+
+
+@admin.register(models.Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name', 'slug', 'author')
 
 
 @admin.register(models.Post)

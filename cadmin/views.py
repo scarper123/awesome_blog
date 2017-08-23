@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.views import login_required
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+
 from cadmin import forms
 
 
@@ -8,9 +9,8 @@ from cadmin import forms
 
 # https://docs.djangoproject.com/en/1.11/topics/auth/default/
 def login(request, **kwargs):
-    if request.method == "POST":
-        if request.user.is_authenticated():
-            return redirect('dashboard')
+    if request.user.is_authenticated():
+        return redirect('dashboard')
     return auth_views.LoginView.as_view(**kwargs)(request, **kwargs)
 
 
