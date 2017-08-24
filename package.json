@@ -1,0 +1,30 @@
+{
+  "name": "awesome_blog",
+  "version": "1.0.0",
+  "description": "Awesome blog with Django and React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scarper123/awesome_blog.git"
+  },
+  "author": "Shanming",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scarper123/awesome_blog/issues"
+  },
+  "homepage": "https://github.com/scarper123/awesome_blog#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.5.5",
+    "webpack-bundle-tracker": "^0.2.0"
+  }
+}

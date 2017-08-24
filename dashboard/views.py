@@ -10,3 +10,7 @@ def home(request):
 
 def help(request):
     return render(request, 'dashboard/help.html')
+
+
+def index(request):
+    return render(request, 'index.html')

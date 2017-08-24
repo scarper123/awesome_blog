@@ -58,3 +58,6 @@ target/
 # Virtualenv
 venv/
 .idea/
+
+# Node modules
+node_modules/

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'dashboard',
     'cadmin',
     'blog',
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -115,8 +116,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'assets'), os.path.join(BASE_DIR, 'static'),)
 
 # Login URl
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth
 LOGIN_URL = 'login'
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map'],
+    }
+}

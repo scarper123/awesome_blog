@@ -18,5 +18,6 @@ from dashboard import views
 
 urlpatterns = [
     url(r'^$', views.home, name="dashboard"),
+    url(r'^index/$', views.index, name="index"),
     url(r'^help/$', views.help, name="help"),
 ]
