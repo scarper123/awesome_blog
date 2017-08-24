@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
 {% block content %}
-    <h1>Helle World</h1>
+    <div id="post_list"></div>
+    {% render_bundle 'main' 'js' %}
 {% endblock content %}
